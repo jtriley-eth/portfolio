@@ -1,92 +1,77 @@
 <script>
-    import Card from "../lib/Card.svelte";
-    import { contributions, works } from "../lib/constants/contributions";
+	import Introduction from '$lib/Introduction.svelte';
+	import Card from '$lib/Card.svelte';
+	import Footer from '$lib/Footer.svelte';
+	import { contributions, works, articles } from '$lib/constants/contributions';
 </script>
 
-<header class="banner">
-	<h1 class="name">jtriley.eth</h1>
-</header>
-
-
 <main>
-	<section class="overview">
-		<h2 class="role">Ethereum Virtual Machine Engineer,</h2>
-		<h2 class="role">Security Researcher</h2>
-	</section>
-    <!-- <iframe title="preview" src="https://open.substack.com/pub/jtriley/p/ethereum-virtual-machine-language" width="300" height="200"></iframe> -->
+	<Introduction />
 	<section class="contributions">
 		<header class="info-header">
-			<h2 class="info-h2">Open Source Contributions</h2>
+			<h2 class="info-h2">Writing</h2>
 		</header>
 		<div class="info-container">
-            {#each contributions as contribution}
-                <Card {...contribution} />
-            {/each}
+			{#each articles as article}
+				<Card {...article} />
+			{/each}
 		</div>
 		<header class="info-header">
-			<h2 class="info-h2">Open Source Projects</h2>
+			<h2 class="info-h2">Projects</h2>
 		</header>
 		<div class="info-container">
-            {#each works as work}
-                <Card {...work} />
-            {/each}
+			{#each works as work}
+				<Card {...work} />
+			{/each}
+		</div>
+		<header class="info-header">
+			<h2 class="info-h2">Contributions</h2>
+		</header>
+		<div class="info-container">
+			{#each contributions as contribution}
+				<Card {...contribution} />
+			{/each}
 		</div>
 	</section>
+	<Footer />
 </main>
 
 <style>
-	.banner {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		border-bottom: 1px solid #e6dcd5;
-	}
-
-	.name {
-		font-size: 3em;
-		padding-top: 0.5em;
-		padding-bottom: 0.5em;
-	}
-
 	main {
 		min-height: 100vh;
 	}
 
-	.overview {
-		height: 60vh;
-	}
-
-	.role {
-		color: #e6dcd5;
-		font-size: 2em;
-		padding: 2em;
-	}
-
 	.info-header {
 		margin: 2em;
-		border-bottom: 1px solid #e6dcd5;
+		border-bottom: 4px solid #a71bbd;
+		border-bottom-left-radius: 16px;
+		overflow: hidden;
 	}
 
 	.info-h2 {
+		padding: 0.75em;
+		padding-bottom: calc(1em - 4px);
 		font-size: 2em;
-		padding-bottom: 0.5em;
+		background: #a71bbd;
+		border-radius: 16px 16px 0 0;
+		width: fit-content;
 	}
 
 	.info-container {
 		display: flex;
 		flex-wrap: wrap;
+		justify-content: space-evenly;
 		margin: 1em;
 	}
 
-	@media only screen and (max-width: 850px) {
-		.info-container {
-			justify-content: center;
+	@media (max-width: 600px) {
+		.info-header {
+			border-bottom: none;
 		}
 
-		.role {
-			font-size: 2em;
-			padding: 1.5em;
+		.info-h2 {
+			border-radius: 16px;
+			font-size: 1.5em;
 		}
 	}
 </style>

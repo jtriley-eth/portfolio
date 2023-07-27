@@ -1,49 +1,73 @@
 export const contributions = [
-    {
-        title: "Vulcan (Nomoi.xyz)",
-        overview: "Development meta-framework for Foundry featuring ergonomic API's, multiple compiler support, and testing and scripting utilities.",
-        details: "Implemented Huff FFI adapter with documentation.",
-        link: "https://github.com/nomoixyz/vulcan",
-    },
-    {
-        title: "Solady (Vectorized)",
-        overview: "Optimized Solidity snippets featuring utilities, common ERC implementations, authentication schemes, and factories.",
-        details: "Implemented ERC1967 Proxy, Factory, and novel authentication scheme.",
-        link: "https://github.com/vectorized/solady",
-    },
-    {
-        title: "Sway (Fuel Labs)",
-        overview: "Modular smart contract language compiler featuring rust-like syntax targeting multiple blockchain execution environments.",
-        details: "Enhanced standard library, wrote specification for Ethereum Virtual Machine backend and EVM-specific standard library structure.",
-        link: "https://github.com/FuelLabs/sway",
-    },
-    {
-        title: "Snekmate (PCaversaccio)",
-        overview: "State-of-the-Art Vyper smart contracts featuring common ERC implementations, authentication schemes, and miscellaneous utility libraries.",
-        details: "Implemented Vyper ERC1155.",
-        link: "https://github.com/pcaversaccio/snekmate",
-    },
-]
+	{
+		title: 'Vulcan (Nomoi.xyz)',
+		overview:
+			"Development meta-framework for Foundry featuring ergonomic API's, multiple compiler support, and testing and scripting utilities.",
+		link: 'https://github.com/nomoixyz/vulcan'
+	},
+	{
+		title: 'Solady (Vectorized)',
+		overview:
+			'Optimized Solidity snippets featuring utilities, common ERC implementations, authentication schemes, and factories.',
+		link: 'https://github.com/vectorized/solady'
+	},
+	{
+		title: 'Artemis (Paradigm)',
+		overview: 'A simple, modular, and fast MEV bot framework.',
+		link: 'https://github.com/paradigmxyz/artemis'
+	},
+	{
+		title: 'Snekmate (PCaversaccio)',
+		overview:
+			'State-of-the-Art Vyper smart contracts featuring common ERC implementations, authentication schemes, and miscellaneous utility libraries.',
+		link: 'https://github.com/pcaversaccio/snekmate'
+	}
+];
 
 export const works = [
-    {
-        title: "Counter Exploit Toolkit",
-        overview: "Toolkit for upgradeable proxy contracts to enable arbitrary storage write, Ether withdrawal, token withdrawal, and token recovery.",
-        details: "(research purposes only)",
-        link: "https://github.com/jtriley-eth/counter-exploit-toolkit",
-    },
-    {
-        title: "EZ Bitmap",
-        overview: "Solidity bitmap library with custom data types and an ergonomic API for on-chain bitmap operations.",
-        link: "https://github.com/jtriley-eth/ez-bitmap",
-    },
-    {
-        title: "Vyper Storage",
-        overview: "Vyper FFI adapter for Foundry including a high level API for creating storage overrides in Vyper contracts within Forge scripts and tests.",
-        link: "https://github.com/jtriley-eth/vyper-storage",
-    },
-    {
-        title: "The Ethereum Virtual Machine",
-        overview: "Markdown documentation for the EVM including instruction set reference, "
-    }
-]
+	{
+		title: 'ERC-6909: Minimal Multi Token Interface',
+		overview:
+			'A multi-token contract interface as a simplified alternative to the ERC-1155 Multi-Token Standard',
+		link: 'https://eips.ethereum.org/EIPS/eip-6909'
+	},
+	{
+		title: 'Uniswap V4 Flash Loan Template',
+		overview: "Template contract for interfacing with Uniswap V4's flash accounting.",
+		link: 'https://github.com/jtriley-eth/uni-v4-core-flashloans'
+	},
+	{
+		title: 'Ether Deck',
+		overview: 'A hyper optimized, extensible smart contract wallet written in Huff.',
+		link: 'https://github.com/jtriley-eth/ether-deck'
+	},
+	{
+		title: 'Huff Style Guide',
+		overview: 'A mostly reasonable approach to Huff styling.',
+		link: 'https://github.com/jtriley-eth/huff-style-guide'
+	},
+	{
+		title: 'Counter Exploit Toolkit',
+		overview: 'Upgradeable proxy toolkit for counter smart contract exploitation.',
+		details: '(research purposes only)',
+		link: 'https://github.com/jtriley-eth/counter-exploit-toolkit'
+	}
+];
+
+export const articles = [
+	{
+		title: 'The Ether Deck',
+		overview: 'A cutting edge smart contract wallet for power users.',
+		link: 'https://open.substack.com/pub/jtriley/p/the-ether-deck?r=1qyfrf&utm_campaign=post&utm_medium=web'
+	},
+	{
+		title: 'Etereum Virtual Machine Language Design',
+		overview: 'The state of the art.',
+		link: 'https://open.substack.com/pub/jtriley/p/ethereum-virtual-machine-language?r=1qyfrf&utm_campaign=post&utm_medium=web'
+	},
+	{
+		title: 'Constructing ZK SNARK Circuits',
+		overview: 'Beyond Domain Specific Languages.',
+		link: 'https://open.substack.com/pub/jtriley/p/constructing-zk-snark-circuits?r=1qyfrf&utm_campaign=post&utm_medium=web'
+	}
+];
